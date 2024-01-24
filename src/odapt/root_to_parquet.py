@@ -188,11 +188,9 @@ def root_to_parquet(
         tree = trees[0]
 
     ak.to_parquet(
-        list(
             f[tree].iterate(
                 step_size=step_size,
-            )
-        ),
+            ),
         out_file,
         list_to32=list_to32,
         string_to32=string_to32,
